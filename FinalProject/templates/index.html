@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+
+    <div class="container d-flex justify-content-center">
+        {% if session["user_id"] %}
+        <form class="border border-warning" method="POST" action="/">
+            <label >Todays date: {{date}}</label>
+            <input id="todayDate" name="todayDate" type="hidden" value="{{date}}">
+            <label value="{{time}}">Current time: {{time}}</label>
+            <input id="todayTime" name="todayTime" type="hidden" value="{{time}}">
+
+            <div class="form-control border-warning" id="formControls">
+
+                <button class="btn btn-primary" id="submit" type="submit">{{ btnText }}</button>
+                
+            </div>
+        </form>
+
+        {% else %}
+
+        <p>welcome to the ChronoGraph application.</p>
+
+        {% endif %}
+    </div>
+
+{% endblock%}

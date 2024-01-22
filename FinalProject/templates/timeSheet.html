@@ -1,0 +1,34 @@
+{%extends "layout.html"%}
+
+{% block title %}
+    Timesheet
+{% endblock%}
+
+{% block main%}
+    {% if tableHead != None %}
+    <div class="container d-flex justify-content-center table-bordered">
+            <table class="table table-bordered table-striped" id="timesheet">
+                <tr>
+                    {% for head in tableHead %}
+                        <th>{{head}}</th>
+                    {% endfor %}
+                </tr>
+                {% for item in data %}
+                    <tr>
+
+                        <td>{{item.Timein}}</td>
+                        <td>{{item.Timeout}}</td>
+                        <td>{{item.Date}}</td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+
+            {% else %}
+
+            <p>you dont seem to have any time on record.</p>
+
+        {% endif %}
+
+    </div>
+{% endblock %}

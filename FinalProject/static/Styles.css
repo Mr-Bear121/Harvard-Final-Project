@@ -1,0 +1,27 @@
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+nav .navbar-brand .blue
+{
+    color: gold;
+}
+
+#timesheet.table-bordered
+{
+    border:1px solid gold;
+}
+#timesheet.table-bordered > thead > tr > th
+{
+    border:1px solid gold;
+}
+#timesheet.table-bordered > tbody > tr > td
+{
+    border:1px solid gold;
+}
+
+nav
+{
+    background-color: blue;
+}
